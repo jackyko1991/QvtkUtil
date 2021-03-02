@@ -7,6 +7,7 @@
 #include <vtkProperty.h>
 #include <vtkRenderWindowInteractor.h>
 #include <vtkRenderWindow.h>
+#include <vtkRendererCollection.h>
 #include <vtkCamera.h>
 #include <vtkRenderer.h>
 #include <vtkInteractorStyle.h>
@@ -383,7 +384,7 @@ namespace Q {
 
 		void Q::vtk::Viewer::update()
 		{
-			this->getRenderWindow()->Render();
+			this->getRenderWindow()->GetRenderers()->GetFirstRenderer()->Render();
 			QWidget::update();
 		}
 
