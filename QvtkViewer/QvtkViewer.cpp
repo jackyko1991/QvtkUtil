@@ -384,7 +384,8 @@ namespace Q {
 
 		void Q::vtk::Viewer::update()
 		{
-			this->getRenderWindow()->GetRenderers()->GetFirstRenderer()->Render();
+			this->getRenderWindow()->Render();
+			//this->getRenderWindow()->GetRenderers()->GetFirstRenderer()->Render();
 			QWidget::update();
 		}
 
