@@ -133,6 +133,8 @@ namespace Q {
 			*/
 			virtual double* UpdateViewUp();
 			Ui::OrthogonalViewer* ui;
+			double currentPlaneNormal[3];
+
 		private:
 			int orientation;
 			bool viewPlaneNormalSyncFlag;
@@ -140,7 +142,6 @@ namespace Q {
 			double sagittalViewPlaneNormal[3];
 			mutable double coronalViewPlaneNormal[3];
 			double axialViewPlaneNormal[3];
-			double currentPlaneNormal[3];
 		};
 	}
 }
