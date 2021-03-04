@@ -65,6 +65,8 @@ namespace Q {
 		{
 			this->ui = new Ui::OrthogonalViewer;
 			this->ui->setupUi(this);
+			vtkNew<vtkGenericOpenGLRenderWindow> renderWindow;
+			this->ui->qvtkWidget->SetRenderWindow(renderWindow);
 			this->viewPlaneNormalSyncFlag = true;
 			this->righthandness = true;
 			this->orientation = ORIENTATION_XY;
